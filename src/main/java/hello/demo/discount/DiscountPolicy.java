@@ -2,7 +2,7 @@ package hello.demo.discount;
 
 import hello.demo.Member.Member;
 
-public interface DIscountPolicy {
+public interface DiscountPolicy {
 
     /**
      * @return 할인 대상 금액
