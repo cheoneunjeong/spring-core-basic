@@ -3,15 +3,14 @@ package hello.demo;
 import hello.demo.Member.Grade;
 import hello.demo.Member.Member;
 import hello.demo.Member.MemberService;
-import hello.demo.Member.MemberServiceImpl;
 import hello.demo.order.Order;
 import hello.demo.order.OrderService;
-import hello.demo.order.OrderServiceImpl;
 
 public class OrderApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
 
         Long memberId = 1L;
         Member memberA = new Member(memberId, "memberA", Grade.VIP);
