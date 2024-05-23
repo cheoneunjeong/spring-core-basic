@@ -5,12 +5,18 @@ import hello.demo.Member.Member;
 import hello.demo.Member.MemberService;
 import hello.demo.order.Order;
 import hello.demo.order.OrderService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class OrderApp {
     public static void main(String[] args) {
-        AppConfig appConfig = new AppConfig();
-        MemberService memberService = appConfig.memberService();
-        OrderService orderService = appConfig.orderService();
+//        AppConfig appConfig = new AppConfig();
+//        MemberService memberService = appConfig.memberService();
+//        OrderService orderService = appConfig.orderService();
+
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        MemberService memberService = ac.getBean("memberService", MemberService.class);
+        OrderService orderService = ac.getBean("orderService", OrderService.class);
 
         Long memberId = 1L;
         Member memberA = new Member(memberId, "memberA", Grade.VIP);
