@@ -1,9 +1,7 @@
 package hello.demo.beanfind;
 
-import hello.demo.Member.MemberRepository;
-import hello.demo.Member.MemoryMemberRepository;
-import hello.demo.discount.DiscountPolicy;
-import org.junit.jupiter.api.Assertions;
+import hello.demo.member.MemberRepository;
+import hello.demo.member.MemoryMemberRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;

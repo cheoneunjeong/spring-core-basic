@@ -1,8 +1,8 @@
 package hello.demo;
 
-import hello.demo.Member.Grade;
-import hello.demo.Member.Member;
-import hello.demo.Member.MemberService;
+import hello.demo.member.Grade;
+import hello.demo.member.Member;
+import hello.demo.member.MemberService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

@@ -1,7 +1,7 @@
 package hello.demo.order;
 
-import hello.demo.Member.Member;
-import hello.demo.Member.MemberRepository;
+import hello.demo.member.Member;
+import hello.demo.member.MemberRepository;
 import hello.demo.discount.DiscountPolicy;
 
 public class OrderServiceImpl implements OrderService {

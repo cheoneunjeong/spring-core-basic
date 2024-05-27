@@ -1,8 +1,8 @@
 package hello.demo;
 
-import hello.demo.Member.Grade;
-import hello.demo.Member.Member;
-import hello.demo.Member.MemberService;
+import hello.demo.member.Grade;
+import hello.demo.member.Member;
+import hello.demo.member.MemberService;
 import hello.demo.order.Order;
 import hello.demo.order.OrderService;
 import org.springframework.context.ApplicationContext;

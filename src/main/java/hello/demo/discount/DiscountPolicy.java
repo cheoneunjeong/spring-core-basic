@@ -1,6 +1,6 @@
 package hello.demo.discount;
 
-import hello.demo.Member.Member;
+import hello.demo.member.Member;
 
 public interface DiscountPolicy {
 
