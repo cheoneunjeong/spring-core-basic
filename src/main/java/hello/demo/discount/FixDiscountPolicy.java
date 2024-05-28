@@ -1,8 +1,13 @@
 package hello.demo.discount;
 
+import hello.demo.annotation.MainDiscountPolicy;
 import hello.demo.member.Grade;
 import hello.demo.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
+@MainDiscountPolicy
 public class FixDiscountPolicy implements DiscountPolicy {
 
     private int discountFixAmount = 1000; // 1000원 할인

@@ -1,18 +1,27 @@
 package hello.demo.order;
 
+import hello.demo.annotation.MainDiscountPolicy;
 import hello.demo.member.Member;
 import hello.demo.member.MemberRepository;
 import hello.demo.discount.DiscountPolicy;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
+
+    @Autowired
+    public OrderServiceImpl(MemberRepository memoryMemberRepository,
+                            @MainDiscountPolicy DiscountPolicy discountPolicy) {
+        this.memberRepository = memoryMemberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     // 필드 주입
 //    @Autowired private MemberRepository memberRepository;
